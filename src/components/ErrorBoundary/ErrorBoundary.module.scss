@@ -1,0 +1,23 @@
+@import "../../styles/theme.module.scss";
+
+.errorDisclaimer {
+  font-size: 24px;
+  color: $spotify-green;
+}
+
+.errorMsg {
+  font-size: 20px;
+  margin: 10px 0;
+  color: $error;
+}
+
+.errorResetBtn {
+  margin-top: 40px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: $spotify-green;
+  color: $whitish;
+  font-size: 24px;
+  cursor: pointer;
+}
