@@ -1,20 +1,10 @@
 html,
 body,
-div,
-span,
 applet,
 object,
 iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
 blockquote,
 pre,
-a,
 abbr,
 acronym,
 address,
@@ -124,15 +114,27 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "Spotify-Bold";
-  src: url("../assets/fonts/GothamBold.ttf");
+  src: url("../assets/fonts/Inter-Bold.ttf");
 }
 @font-face {
   font-family: "Spotify-Medium";
-  src: url("../assets/fonts/GothamMedium.ttf");
+  src: url("../assets/fonts/Inter-Medium.ttf");
 }
 @font-face {
-  font-family: "Spotify-Normal";
-  src: url("../assets/fonts/GothamBook.ttf");
+  font-family: "Spotify-Regular";
+  src: url("../assets/fonts/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: "Spotify-Thin";
+  src: url("../assets/fonts/Spotify-Thin.ttf");
+}
+
+* {
+  font-family: "Spotify-Medium", sans-serif !important;
 }

@@ -1,14 +1,10 @@
 import { createStoreon } from "storeon";
-import { persistState } from "@storeon/localstorage";
 
-import { accessToken } from "./stores";
+import { accessToken } from "./slices";
 
-import { AccessTokenEvents, AccessTokenState } from "./stores/accessToken";
+import { AccessTokenEvents, AccessTokenState } from "./slices/accessToken";
 
-export interface State extends AccessTokenState {};
-export interface Events extends AccessTokenEvents {};
+export interface State extends AccessTokenState {}
+export interface Events extends AccessTokenEvents {}
 
-export const store = createStoreon([
-  accessToken,
-  persistState(["accessToken"], { storage: localStorage }),
-]);
+export const store = createStoreon([accessToken]);

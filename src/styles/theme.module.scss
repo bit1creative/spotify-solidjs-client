@@ -9,6 +9,10 @@ $sm: 1024px;
 $md: 1920px;
 $lg: 2560px;
 
+html {
+  background-color: $spotify-black;
+}
+
 .backgroundMain {
   background-color: $spotify-black;
   height: 100vh;

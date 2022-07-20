@@ -1,9 +1,12 @@
 import queryString from "simple-query-string";
 
-const getAccessTokenFromHash = (hash: string): string => {
-  const access_token = (queryString.parse(hash)?.access_token as string) ?? "";
+import { AccessTokenDataType } from "../types/spotify.types";
 
-  return access_token;
+const getAccessTokenFromHash = (hash: string): AccessTokenDataType => {
+  const accessTokenData =
+    (queryString.parse(hash) as AccessTokenDataType) ?? {};
+
+  return accessTokenData;
 };
 
 export { getAccessTokenFromHash };
