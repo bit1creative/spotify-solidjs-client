@@ -18,17 +18,17 @@ import styles from "./Login.module.scss";
 import { State, Events } from "../../store";
 
 const LoginPage: Component = () => {
-    const { hash } = useLocation();
-    const [state, dispatch] = useStoreon<State, Events>();
+  const { hash } = useLocation();
+  const [state, dispatch] = useStoreon<State, Events>();
 
-    if (!state.token) {
-        const accessTokenData = createMemo(() => getAccessTokenFromHash(hash));
+  if (!state.token) {
+    const accessTokenData = createMemo(() => getAccessTokenFromHash(hash));
 
-        if (accessTokenData().access_token) {
-        window.history.replaceState({}, "", "/");
-        dispatch("accessToken/set", accessTokenData());
-        }
+    if (accessTokenData().access_token) {
+      window.history.replaceState({}, "", "/");
+      dispatch("accessToken/set", accessTokenData());
     }
+  }
 
   return (
     <div class={styles.loginContainer}>

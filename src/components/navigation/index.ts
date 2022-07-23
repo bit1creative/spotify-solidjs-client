@@ -1,1 +1,1 @@
-export { TabBarPhone } from './TabBar/TabBarPhone';
+export { TabBarPhone } from "./TabBar/TabBarPhone";
