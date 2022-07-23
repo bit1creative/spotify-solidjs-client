@@ -1,13 +1,16 @@
 import { Component } from "solid-js";
 
+// layout
+import { Layout } from "../../components";
+
 // styles
 import themeStyles from "../../styles/theme.module.scss";
 
 const HomePage: Component = () => {
   return (
-      <div>
-        <span>Logged in</span>
-      </div>
+    <Layout>
+      <span>Logged in</span>
+    </Layout>
   );
 };
 

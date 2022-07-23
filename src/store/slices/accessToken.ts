@@ -15,7 +15,6 @@ export const accessToken: StoreonModule<AccessTokenState, AccessTokenEvents> = (
   store
 ) => {
   store.on("@init", () => {
-
     const tokenFromCookies = Cookies.get("accessToken") ?? "";
 
     return {
@@ -24,7 +23,6 @@ export const accessToken: StoreonModule<AccessTokenState, AccessTokenEvents> = (
   });
 
   store.on("accessToken/set", (state, accessTokenData: AccessTokenDataType) => {
-    
     const { access_token, expires_in } = accessTokenData;
 
     Cookies.set("accessToken", access_token, {
